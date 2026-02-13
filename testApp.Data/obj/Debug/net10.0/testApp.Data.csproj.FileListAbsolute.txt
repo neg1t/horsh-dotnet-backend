@@ -1,0 +1,14 @@
+C:\src\testApp\testApp.Data\bin\Debug\net10.0\testApp.Data.deps.json
+C:\src\testApp\testApp.Data\bin\Debug\net10.0\testApp.Data.runtimeconfig.json
+C:\src\testApp\testApp.Data\bin\Debug\net10.0\testApp.Data.dll
+C:\src\testApp\testApp.Data\bin\Debug\net10.0\testApp.Data.pdb
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\testApp.Data.csproj.AssemblyReference.cache
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\testApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\testApp.Data.AssemblyInfoInputs.cache
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\testApp.Data.AssemblyInfo.cs
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\testApp.Data.csproj.CoreCompileInputs.cache
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\testApp.Data.dll
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\refint\testApp.Data.dll
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\testApp.Data.pdb
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\testApp.Data.genruntimeconfig.cache
+C:\src\testApp\testApp.Data\obj\Debug\net10.0\ref\testApp.Data.dll
