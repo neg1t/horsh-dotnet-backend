@@ -13,9 +13,34 @@ namespace testApp.WebApi
 
             var isDev = builder.Environment.IsDevelopment();
 
-            var origins = builder.Configuration
+            string[] origins;
+
+            // Пробуем получить как массив из конфигурации
+            var originsFromConfig = builder.Configuration
                 .GetSection("CorsPolicy:AllowedOrigins")
-                .Get<string[]>() ?? Array.Empty<string>();
+                .Get<string[]>();
+
+            if (originsFromConfig != null && originsFromConfig.Length > 0)
+            {
+                origins = originsFromConfig;
+            }
+            else
+            {
+                // Если не получилось, пробуем прочитать как строку и разделить
+                var originsString = builder.Configuration["CorsPolicy:AllowedOrigins"];
+                if (!string.IsNullOrEmpty(originsString))
+                {
+                    // Убираем квадратные скобки и разделяем по запятой
+                    originsString = originsString.Trim('[', ']');
+                    origins = originsString.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                                          .Select(o => o.Trim())
+                                          .ToArray();
+                }
+                else
+                {
+                    origins = Array.Empty<string>();
+                }
+            }
 
             var hasCors = origins.Length != 0;
 
@@ -27,9 +52,17 @@ namespace testApp.WebApi
                     {
                         policy.WithOrigins(origins)
                               .AllowAnyHeader()
-                              .AllowAnyMethod();
+                              .AllowAnyMethod()
+                              .AllowCredentials(); // Добавьте если используете куки/авторизацию
                     });
                 });
+
+                // Для отладки - выведите разрешенные origins
+                Console.WriteLine($"CORS enabled for: {string.Join(", ", origins)}");
+            }
+            else
+            {
+                Console.WriteLine("CORS is disabled - no origins configured");
             }
 
 

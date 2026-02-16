@@ -2701,23 +2701,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eshch\\.nuget\\packages\\": {},
+    "C:\\Users\\onlyg\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\src\\testApp\\testApp.Data\\testApp.Data.csproj",
+      "projectUniqueName": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\testApp.Data.csproj",
       "projectName": "testApp.Data",
-      "projectPath": "C:\\src\\testApp\\testApp.Data\\testApp.Data.csproj",
-      "packagesPath": "C:\\Users\\eshch\\.nuget\\packages\\",
-      "outputPath": "C:\\src\\testApp\\testApp.Data\\obj\\",
+      "projectPath": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\testApp.Data.csproj",
+      "packagesPath": "C:\\Users\\onlyg\\.nuget\\packages\\",
+      "outputPath": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\eshch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\onlyg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
