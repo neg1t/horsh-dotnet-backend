@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "testApp.Data": {
+      "commandName": "Project",
+      "jsWebView2Debugging": false,
+      "sqlDebugging": false,
+      "nativeDebugging": false,
+      "hotReloadEnabled": true
+    }
+  }
+}
