@@ -92,6 +92,13 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "HasDescription",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
           }
         ],
         "responses": {

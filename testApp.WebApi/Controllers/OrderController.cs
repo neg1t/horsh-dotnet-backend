@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using testApp.Data;
 using testApp.Data.Models;
 
@@ -44,7 +45,7 @@ namespace testApp.WebApi.Controllers
             }
 
             var newOrder = new Order
-            { 
+            {
                 Id = order.Id,
                 Name = order.Name,
                 Description = order.Description,
@@ -63,7 +64,30 @@ namespace testApp.WebApi.Controllers
         [ProducesResponseType(typeof(Order[]), Microsoft.AspNetCore.Http.StatusCodes.Status200OK)]
         public async Task<IActionResult> GetOrders([FromQuery] GetOrdersQueryParams query)
         {
-            var orders = _context.Orders.Where(x => x.Name.Equals(query.SearchQuery)).ToList();
+
+            var q = query ?? new GetOrdersQueryParams();
+
+            IQueryable<Order> ordersQuery = _context.Orders.AsQueryable();
+
+            if (!string.IsNullOrEmpty(q.SearchQuery))
+            {
+                var searchQueryLower = q.SearchQuery.Trim().ToLower();
+                ordersQuery = ordersQuery.Where(o => o.Name != null && o.Name.ToLower().Contains(searchQueryLower) || o.Description != null && o.Description.ToLower().Contains(searchQueryLower));
+            }
+
+            if (q.HasDescription.HasValue)
+            {
+                if (q.HasDescription.Value)
+                {
+                    ordersQuery = ordersQuery.Where(o => !string.IsNullOrEmpty(o.Description));
+                }
+                else
+                {
+                    ordersQuery = ordersQuery.Where(o => string.IsNullOrEmpty(o.Description));
+                }
+            }
+
+            var orders = ordersQuery.ToList();
 
             return Ok(orders);
         }
@@ -83,6 +107,7 @@ namespace testApp.WebApi.Controllers
         public class GetOrdersQueryParams
         {
             public string? SearchQuery { get; set; }
+            public bool? HasDescription { get; set; }
         }
     }
 
