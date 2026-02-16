@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eTWDszw9IE8=",
+  "dgSpecHash": "BZQKzCO5wWM=",
   "success": true,
-  "projectFilePath": "D:\\src\\test\\horsh-dotnet-backend\\testApp.WebApi\\testApp.WebApi.csproj",
+  "projectFilePath": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.WebApi\\testApp.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\onlyg\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
     "C:\\Users\\onlyg\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.3\\microsoft.entityframeworkcore.10.0.3.nupkg.sha512",

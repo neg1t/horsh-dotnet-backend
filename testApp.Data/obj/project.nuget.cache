@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "awgacD5LQzU=",
+  "dgSpecHash": "Yaoip6sfDvc=",
   "success": true,
-  "projectFilePath": "D:\\src\\test\\horsh-dotnet-backend\\testApp.Data\\testApp.Data.csproj",
+  "projectFilePath": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\testApp.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\onlyg\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\onlyg\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
