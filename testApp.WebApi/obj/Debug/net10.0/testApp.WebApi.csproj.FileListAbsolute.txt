@@ -126,3 +126,4 @@ D:\src\horsh\horsh-dotnet-backend\testApp.WebApi\obj\Debug\net10.0\refint\testAp
 D:\src\horsh\horsh-dotnet-backend\testApp.WebApi\obj\Debug\net10.0\testApp.WebApi.pdb
 D:\src\horsh\horsh-dotnet-backend\testApp.WebApi\obj\Debug\net10.0\testApp.WebApi.genruntimeconfig.cache
 D:\src\horsh\horsh-dotnet-backend\testApp.WebApi\obj\Debug\net10.0\ref\testApp.WebApi.dll
+C:\src\testApp\testApp.WebApi\obj\Debug\net10.0\testApp.WebApi.sourcelink.json

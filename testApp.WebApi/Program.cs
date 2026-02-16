@@ -1,5 +1,6 @@
 using Scalar.AspNetCore;
 using testApp.Data;
+using System;
 
 
 namespace testApp.WebApi
@@ -11,47 +12,46 @@ namespace testApp.WebApi
             var builder = WebApplication.CreateBuilder(args);
 
             var isDev = builder.Environment.IsDevelopment();
-            var isProd = builder.Environment.IsProduction();
 
-            // Список origin'ов в зависимости от окружения
-            var allowedOrigins = isDev
-                ? ["http://localhost:8000", "https://localhost:8000"]
-                : new[] { "https://horsh-react-frontend.vercel.app" };
+            var origins = builder.Configuration
+                .GetSection("CorsPolicy:AllowedOrigins")
+                .Get<string[]>() ?? Array.Empty<string>();
 
-            builder.Services.AddCors(options =>
+            var hasCors = origins.Length != 0;
+
+            if (hasCors)
             {
-                options.AddPolicy("DefaultCors", policy =>
+                builder.Services.AddCors(options =>
                 {
-                    policy.WithOrigins(allowedOrigins)
-                          .AllowAnyHeader()
-                          .AllowAnyMethod();
-                    // .AllowCredentials(); // включите только если действительно нужны credentials и тогда не используйте AllowAnyOrigin
+                    options.AddPolicy("DefaultCors", policy =>
+                    {
+                        policy.WithOrigins(origins)
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
                 });
-            });
+            }
 
-
-            // Add services to the container.
 
             builder.Services.AddControllers();
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
             builder.Services.RegisterDataAccessServices(builder.Configuration, builder.Environment.IsDevelopment());
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-
             app.MapOpenApi();
-
 
             app.MapScalarApiReference();
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            if (hasCors)
+            {
+                app.UseCors("DefaultCors");
+            }
 
-            app.UseCors("DefaultCors");
+            app.UseAuthorization();
 
             app.MapControllers();
 

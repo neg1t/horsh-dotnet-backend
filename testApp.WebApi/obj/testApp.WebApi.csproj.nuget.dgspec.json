@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.WebApi\\testApp.WebApi.csproj": {}
+    "C:\\src\\testApp\\testApp.WebApi\\testApp.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\testApp.Data.csproj": {
+    "C:\\src\\testApp\\testApp.Data\\testApp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\testApp.Data.csproj",
+        "projectUniqueName": "C:\\src\\testApp\\testApp.Data\\testApp.Data.csproj",
         "projectName": "testApp.Data",
-        "projectPath": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\testApp.Data.csproj",
-        "packagesPath": "C:\\Users\\onlyg\\.nuget\\packages\\",
-        "outputPath": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\obj\\",
+        "projectPath": "C:\\src\\testApp\\testApp.Data\\testApp.Data.csproj",
+        "packagesPath": "C:\\Users\\eshch\\.nuget\\packages\\",
+        "outputPath": "C:\\src\\testApp\\testApp.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\onlyg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eshch\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -367,20 +367,20 @@
         }
       }
     },
-    "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.WebApi\\testApp.WebApi.csproj": {
+    "C:\\src\\testApp\\testApp.WebApi\\testApp.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.WebApi\\testApp.WebApi.csproj",
+        "projectUniqueName": "C:\\src\\testApp\\testApp.WebApi\\testApp.WebApi.csproj",
         "projectName": "testApp.WebApi",
-        "projectPath": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.WebApi\\testApp.WebApi.csproj",
-        "packagesPath": "C:\\Users\\onlyg\\.nuget\\packages\\",
-        "outputPath": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.WebApi\\obj\\",
+        "projectPath": "C:\\src\\testApp\\testApp.WebApi\\testApp.WebApi.csproj",
+        "packagesPath": "C:\\Users\\eshch\\.nuget\\packages\\",
+        "outputPath": "C:\\src\\testApp\\testApp.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\onlyg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eshch\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -395,8 +395,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\testApp.Data.csproj": {
-                "projectPath": "D:\\src\\horsh\\horsh-dotnet-backend\\testApp.Data\\testApp.Data.csproj"
+              "C:\\src\\testApp\\testApp.Data\\testApp.Data.csproj": {
+                "projectPath": "C:\\src\\testApp\\testApp.Data\\testApp.Data.csproj"
               }
             }
           }
