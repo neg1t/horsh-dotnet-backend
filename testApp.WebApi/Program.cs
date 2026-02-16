@@ -50,10 +50,10 @@ namespace testApp.WebApi
                 {
                     options.AddPolicy("DefaultCors", policy =>
                     {
-                        policy.WithOrigins(origins)
+                        //.WithOrigins(origins)
+                        policy.AllowAnyOrigin()
                               .AllowAnyHeader()
-                              .AllowAnyMethod()
-                              .AllowCredentials(); // Добавьте если используете куки/авторизацию
+                              .AllowAnyMethod();
                     });
                 });
 
